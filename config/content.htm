@@ -1,5 +1,54 @@
 <h1>About</h1>
 <p><a href="https://github.com/mdecycu/cmsite"> https://github.com/mdecycu/cmsite</a></p>
+<h1>w5</h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">// 包含標準輸出入程式庫的標頭文件
+// https://blog.csdn.net/weixin_38468077/article/details/101069365
+// http://www.gnuplot.info/demo/
+// https://github.com/sysprog21/rv32emu
+// https://github.com/sysprog21/semu 
+// https://docs.google.com/presentation/d/14N0cWG2SnBSqhc2cLF0_2VerB9FF8JN3
+// https://cs61c.org/fa23/
+// https://greenteapress.com/wp/think-python-2e/
+// https://github.com/ecalvadi/c99-examples
+// https://github.com/gouravthakur39/beginners-C-program-examples
+// https://github.com/ergenekonyigit/Numerical-Analysis-Examples
+// https://www.che.ncku.edu.tw/facultyweb/changct/html/teaching/CPPandMATLAB/Past/pdf%20Files/Chap02-Ling.pdf
+// https://gteceducation.com.sg/Brochures/PROGRAMMING/C%20PROGRAMMING%20FULL.pdf
+// https://jsommers.github.io/cbook/cbook.pdf
+// https://jsommers.github.io/cbook/index.html
+// http://student.itee.uq.edu.au/courses/csse2310/CProgrammingNotes.pdf
+// http://cslibrary.stanford.edu/101/EssentialC.pdf
+// https://publications.gbdirect.co.uk/c_book/
+// https://www.fossil-scm.org/fossil-book/doc/2ndEdition/fossilbook.pdf
+// ***** execute on replit 
+// cd downloads
+// cc gnuplot_ex1.c -o gnuplot_ex1
+// ./gnuplot_ex1
+#include &lt;stdio.h&gt;
+
+// 主函式
+int main() {
+    // Start a Gnuplot process using popen
+    FILE *gnuplotPipe = popen("gnuplot -persistent", "w");
+    if (!gnuplotPipe) {
+        fprintf(stderr, "Failed to start Gnuplot.\n");
+        return 1;
+    }
+
+    // Use Gnuplot plotting commands, specify font and output as PNG
+    fprintf(gnuplotPipe, "set terminal png font 'default,10' size 800,400\n");
+    fprintf(gnuplotPipe, "set output './../images/gnuplot_ex1.png'\n");
+    fprintf(gnuplotPipe, "plot sin(x)");
+    // Close popen
+    pclose(gnuplotPipe);
+
+    return 0;
+}</pre>
+<p>clear</p>
+<p>cd downloads</p>
+<p>cc gnuplot_ex1.c</p>
+<p>./a.out</p>
+<p><img alt="" height="200" src="/images/gnuplot_ex1.png" width="400"/></p>
 <h1>w6</h1>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 #include &lt;gd.h&gt;
@@ -181,55 +230,21 @@ void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotatio
 <p>clear</p>
 <p>cd downloads</p>
 <p>cc gd_usa_flag.c -lgd -lm</p>
-<p>./a.out</p><h1>w5</h1>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">// 包含標準輸出入程式庫的標頭文件
-// https://blog.csdn.net/weixin_38468077/article/details/101069365
-// http://www.gnuplot.info/demo/
-// https://github.com/sysprog21/rv32emu
-// https://github.com/sysprog21/semu 
-// https://docs.google.com/presentation/d/14N0cWG2SnBSqhc2cLF0_2VerB9FF8JN3
-// https://cs61c.org/fa23/
-// https://greenteapress.com/wp/think-python-2e/
-// https://github.com/ecalvadi/c99-examples
-// https://github.com/gouravthakur39/beginners-C-program-examples
-// https://github.com/ergenekonyigit/Numerical-Analysis-Examples
-// https://www.che.ncku.edu.tw/facultyweb/changct/html/teaching/CPPandMATLAB/Past/pdf%20Files/Chap02-Ling.pdf
-// https://gteceducation.com.sg/Brochures/PROGRAMMING/C%20PROGRAMMING%20FULL.pdf
-// https://jsommers.github.io/cbook/cbook.pdf
-// https://jsommers.github.io/cbook/index.html
-// http://student.itee.uq.edu.au/courses/csse2310/CProgrammingNotes.pdf
-// http://cslibrary.stanford.edu/101/EssentialC.pdf
-// https://publications.gbdirect.co.uk/c_book/
-// https://www.fossil-scm.org/fossil-book/doc/2ndEdition/fossilbook.pdf
-// ***** execute on replit 
-// cd downloads
-// cc gnuplot_ex1.c -o gnuplot_ex1
-// ./gnuplot_ex1
-#include &lt;stdio.h&gt;
-
-// 主函式
-int main() {
-    // Start a Gnuplot process using popen
-    FILE *gnuplotPipe = popen("gnuplot -persistent", "w");
-    if (!gnuplotPipe) {
-        fprintf(stderr, "Failed to start Gnuplot.\n");
-        return 1;
-    }
-
-    // Use Gnuplot plotting commands, specify font and output as PNG
-    fprintf(gnuplotPipe, "set terminal png font 'default,10' size 800,400\n");
-    fprintf(gnuplotPipe, "set output './../images/gnuplot_ex1.png'\n");
-    fprintf(gnuplotPipe, "plot sin(x)");
-    // Close popen
-    pclose(gnuplotPipe);
-
-    return 0;
-}</pre>
-<p>clear</p>
-<p>cd downloads</p>
-<p>cc gnuplot_ex1.c</p>
 <p>./a.out</p>
-<p><img alt="" height="200" src="/images/gnuplot_ex1.png" width="400"/></p><h1>Brython</h1>
+<h1>w12</h1>
+<p>#include &lt;stdio.h&gt;<br/>#include &lt;gd.h&gt;<br/>#include &lt;math.h&gt;</p>
+<p>git checkout main<br/>int main() {<br/> int width = 800;<br/> int height = 600;</p>
+<p>gdImagePtr img = gdImageCreateTrueColor(width, height);<br/> gdImageAlphaBlending(img, 0);</p>
+<p>FILE *outputFile = fopen("hellogd.png", "wb");<br/> if (outputFile == NULL) {</p>
+<p>fprintf(stderr, "Error opening the output file.\n");</p>
+<p>return 1;<br/> }</p>
+<p>int red = gdImageColorAllocate(img, 255, 0, 0);<br/> int blue = gdImageColorAllocate(img, 0, 0, 255);<br/> int black = gdImageColorAllocate(img, 0, 0, 0);<br/> int white = gdImageColorAllocate(img, 255, 255, 255);<br/> // 長方形塗色<br/> gdImageFilledRectangle(img, 0, 0, width, height, white);<br/> gdImageFilledRectangle(img, 0, 0, (int)width/4, (int)height/4, blue);<br/> // 橢圓形塗色<br/> gdImageFilledEllipse(img, (int)width*3/4, (int)height/4, (int)width/4, (int)width/4, red);<br/> // 橢圓形畫線<br/> gdImageEllipse(img, (int)width*3/4, (int)height*3/4, (int)width/4, (int)width/4, red);<br/> // 畫直線<br/> gdImageLine(img, (int)width/2, (int)height/2, (int)width/2, (int)height/2 + 100, blue);</p>
+<p>// 多邊形畫線<br/> gdPoint points[4];<br/> points[0].x = (int)width/4;<br/> points[0].y = (int)height*3/4;<br/> points[1].x = points[0].x + 100;<br/> points[1].y = points[0].y;<br/> points[2].x = points[1].x;<br/> points[2].y = points[1].y + 100;<br/> points[3].x = points[2].x - 100;<br/> points[3].y = points[2].y;<br/> gdImagePolygon(img, points, 4, black);</p>
+<p>// 多邊形塗色<br/> gdPoint points2[4];<br/> points2[0].x = (int)width/3;<br/> points2[0].y = (int)height/2;<br/> points2[1].x = points2[0].x + 100;<br/> points2[1].y = points2[0].y;<br/> points2[2].x = points2[1].x;<br/> points2[2].y = points2[1].y + 100;<br/> points2[3].x = points2[2].x - 150;<br/> points2[3].y = points2[2].y;<br/> gdImageFilledPolygon(img, points2, 4, red);</p>
+<p>gdImagePngEx(img, outputFile, 9);<br/> fclose(outputFile);<br/> gdImageDestroy(img);<br/> return 0;<br/>}</p>
+<p><img alt="" height="421" src="/images/w12.png" width="561"/></p>
+<h1>W13</h1>
+<h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
@@ -262,12 +277,6 @@ int main() {
 <p>這個頁面 demo 如何在同一頁面下納入多個線上 Ace 編輯器與執行按鈕 (<a href="/downloads/practice_html.txt">practice_html.txt</a> 動態頁面超文件).</p>
 <p><a href="/downloads/practice_html.txt">practice_html.txt</a> 動態頁面超文件應該可以在啟動 Brython 時, 設定將 .py 檔案放入 downloads/py 目錄中引用.</p>
 <p>亦即將所有對應的 html 也使用 Brython 產生, 然後寫為 <a href="https://docs.python.org/3/tutorial/classes.html">class</a> 後, 在範例導入時透過 <a href="https://docs.python.org/3/tutorial/classes.html#instance-objects">instance</a> 引用.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 啟動 Brython --&gt;
-&lt;script&gt;
-window.onload=function(){
-brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
-}
-&lt;/script&gt;</pre>
 <p>從 1 累加到 100:</p>
 <p><button id="add1to100">1 add to 100</button></p>
 <p>將 iterable 與 iterator <a href="https://home.gamer.com.tw/creationDetail.php?sn=4337438">相關說明</a>, 利用 Brython 與 Ace Editor 整理在這個頁面.</p>
