@@ -2,8 +2,6 @@
 #include <gd.h>
 #include <math.h>
 
-git checkout main
-git merge 新增W12
 int main() {
     int width = 800;
     int height = 600;
