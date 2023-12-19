@@ -2,6 +2,7 @@
 #include <gd.h>
 #include <math.h>
 
+git checkout main
 int main() {
     int width = 800;
     int height = 600;
