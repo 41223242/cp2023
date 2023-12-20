@@ -1,5 +1,8 @@
 #include <stdio.h>
-#include <gd.h>
+#downloads
+
+japan.c
+include <gd.h>
 #include <math.h>
 
 void draw_japan_flag(gdImagePtr img);
