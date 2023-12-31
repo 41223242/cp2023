@@ -988,9 +988,157 @@ void draw_roc_flag(gdImagePtr img) {
 </pre>
 <p><br/><br/></p>
 <p></p>
-<p></p><h1>ANSIC</h1>
+<p></p><h1>C ex</h1>
+<p>1.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+void main()
+{
+/* 印出 Hello */
+printf("Hello World!");
+}</pre>
 <p></p>
-<h1>Brython</h1>
+<p><img alt="" height="97" src="/images/螢幕擷取畫面 2023-12-31 122720.png" width="282"/></p>
+<p>2.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+/* 印出 Hello World! Bye Bye */
+printf("Hello World! ");
+printf("Bye ");
+printf("Bye");
+return 0;
+}</pre>
+<p><img alt="" height="87" src="/images/螢幕擷取畫面 2023-12-31 122853.png" width="312"/><br/><br/></p>
+<p>3.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+int a = 1;
+int A = 8;
+int b = 2, c;
+c = A - a + b;
+/* 輸出 a, A, b, c 到螢幕 */
+printf( "a = %d, A = %d, b = %d, c = %d ", a, A, b, c );
+return 0;
+}</pre>
+<p><img alt="" height="84" src="/images/螢幕擷取畫面 2023-12-31 123444.png" width="370"/></p>
+<p>4.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+void main()
+{
+float a = 0.5;
+double b = 1.2;
+int c = 3;
+b = b + a + c;
+/* 輸出 a, b, c 到螢幕 */
+printf( " a = %3.1f, b = %3.1f, c = %d ", a ,b, c );
+}
+</pre>
+<p><img alt="" height="83" src="/images/螢幕擷取畫面 2023-12-31 120618.png" width="330"/></p>
+<p>5.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+char x, y;
+x = 'a';
+y = (char)97;
+/* 輸出 x, y, x, 最後一個是以 ASCII 值顯示 y */
+printf( " x = %c, y = %c, ASCII of y = %d", x, y, y );
+return 0;
+}</pre>
+<p><img alt="" height="99" src="/images/螢幕擷取畫面 2023-12-31 123709.png" width="388"/></p>
+<p>6.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main()
+{
+    int a = 64;
+    int b = 0x40;
+    long c = 64L;
+    printf("%d, %d, %ld", a, b, c);
+    return 0;
+}
+</pre>
+<p><img alt="" height="90" src="/images/螢幕擷取畫面 2023-12-31 123743.png" width="272"/></p>
+<p>7.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+/* ====================
+计算长方形面积, 需传入长与宽.
+==================== */
+int rect(int x, int y)
+{
+    int result;
+    result = x * y;
+    return result; /* 返回 result */
+}
+
+/* ====================
+主函数
+==================== */
+int main()
+{
+    int x = 8, y = 4;
+    int a;
+    a = rect(x, y);
+    printf("8*4 的面积是 %d", a);
+    return 0;
+}</pre>
+<p><img alt="" height="97" src="/images/螢幕擷取畫面 2023-12-31 125247.png" width="280"/></p>
+<p>8.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+int main()
+{
+int a,b;
+a = 10; b = 3;
+printf( "%d \n", a * b );
+printf( "%d \n", a / b );
+printf( "%d \n", a + b );
+printf( "%d \n", a - b );
+printf( "%d \n", a % b );
+return 0;
+}
+</pre>
+<p><img alt="" height="153" src="/images/螢幕擷取畫面 2023-12-31 124456.png" width="277"/></p>
+<p>9.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main()
+{
+int a = 10, b = 5;
+printf( " a == b is %d \n", a == b );
+printf( " a &gt; b is %d \n", a &gt; b );
+printf( " a &lt; b is %d \n", a &lt; b );
+printf( " a &gt;= b is %d \n", a &gt;= b );
+printf( " a &lt;= b is %d \n", a &lt;= b );
+printf( " a != b is %d \n", a != b );
+printf( "\n" );
+b = 10;
+printf( " a == b is %d \n", a == b );
+printf( " a &gt; b is %d \n", a &gt; b );
+printf( " a &lt; b is %d \n", a &lt; b );
+printf( " a &gt;= b is %d \n", a &gt;= b );
+printf( " a &lt;= b is %d \n", a &lt;= b );
+printf( " a != b is %d \n", a != b );
+return 0;
+}</pre>
+<p><img alt="" height="294" src="/images/螢幕擷取畫面 2023-12-31 124541.png" width="311"/></p>
+<p>10.</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include&lt;stdio.h&gt;
+void main()
+{
+int a,b;
+a = 15;
+b = 1;
+printf("%d \n", a | b ); /* a OR b */
+printf("%d \n", a &amp; b ); /* a AND b */
+printf("%d \n", a ^ b ); /* a XOR b */
+printf("%d \n", a &lt;&lt; 1 ); /* a 位元左移 1 位 */
+printf("%d \n", a &gt;&gt; 1 ); /* a 位元右移一位 */
+printf("%d \n", ~a ); /* A 的補數運算 */
+}
+</pre>
+<p><img alt="" height="183" src="/images/螢幕擷取畫面 2023-12-31 124627.png" width="280"/></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
